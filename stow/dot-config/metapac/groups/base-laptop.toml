@@ -1,0 +1,4 @@
+arch = [
+    "lvm2",
+    "power-profiles-daemon",
+]

@@ -1,0 +1,3 @@
+$inactive = {{color0 | strip}}
+$border_1 = {{color4 | strip}}
+$border_2 = {{color6 | strip}}

@@ -1,0 +1,26 @@
+arch = [
+    # internet
+    "librewolf-bin",
+    "vesktop-bin",
+    "ungoogled-chromium-bin",
+    "qbittorrent",
+
+    # media 
+    "yt-dlp",
+    "mediainfo",
+    "imagemagick",
+    "gimp",
+    "zathura",
+    "zathura-pdf-mupdf",
+    "blender",
+    "obs-studio",
+    "mpv",
+    "imv",
+
+    # general
+    "fastfetch",
+    "htop",
+    "7zip",
+    "keepassxc",
+    "unzip",
+]

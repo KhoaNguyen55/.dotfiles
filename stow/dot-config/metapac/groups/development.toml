@@ -1,0 +1,23 @@
+arch = [
+    # terminals
+    "zsh",
+    "tmux",
+    "sshfs",
+    "zsh-syntax-highlighting",
+
+    # services
+    "docker",
+
+    # neovim
+    "neovim",
+    "fzf",
+    "ripgrep",
+    "lua-language-server",
+    "gcc",
+    "python",
+    "nodejs",
+
+    #Video games
+    "godot",
+    "libresprite",
+]

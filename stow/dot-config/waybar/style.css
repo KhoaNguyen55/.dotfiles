@@ -1,0 +1,86 @@
+@import "/home/me/.cache/wallust/waybar.css";
+
+* {
+    font-family:  AurulentSansM;
+    font-size: 23px;
+    border-radius: 10px;
+    min-height: 0;
+    font-weight: bold;
+}
+
+#workspaces{
+    background-color: @background;
+    margin: 6px 3px;
+}
+
+#waybar {
+    background-color: transparent;
+    transition-property: background-color;
+    transition-duration: 0.5s;
+}
+
+#window,
+#submap,
+#temperature,
+#custom-power,
+#custom-reboot,
+#bluetooth,
+#battery,
+#pulseaudio,
+#backlight,
+#custom-temperature,
+#memory,
+#cpu,
+#power-profiles-daemon,
+#idle_inhibitor,
+#tray,
+#clock,
+#network {
+    margin: 6px 3px;
+    padding: 6px 12px;
+    background-color: @background;
+    color: @text;
+}
+
+#clock {
+    padding-top: 13px;
+}
+
+#waybar.hidden {
+    opacity: 0.5;
+}
+
+#workspaces button {
+    all: initial;
+    min-width: 0;
+    box-shadow: inset 0 -3px transparent;
+    padding: 6px 18px;
+    color: @text;
+}
+
+#workspaces button.active {
+    background-color: @workspace;
+    border-radius: 10px;
+    box-shadow: inset 0 -3px @workspace_underline;
+    color: @text_dark;
+}
+
+#workspaces button:hover {
+    box-shadow: inherit;
+    text-shadow: inherit;
+    color: #1e1e2e;
+    background-color: @workspace_hover;
+}
+
+tooltip {
+    border-radius: 8px;
+    padding: 16px;
+    background-color: #131822;
+    color: #C0C0C0;
+}
+
+tooltip label {
+    padding: 5px;
+    background-color: #131822;
+    color: #C0C0C0;
+}

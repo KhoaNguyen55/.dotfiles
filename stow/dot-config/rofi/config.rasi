@@ -1,0 +1,5 @@
+@import "~/.cache/wallust/rofi.rasi"
+* {
+    font: "AurulentSansM Bold 18";
+    padding: 5px;
+}

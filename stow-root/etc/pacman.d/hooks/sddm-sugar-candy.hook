@@ -1,0 +1,8 @@
+[Trigger]
+Operation = Install
+Type = Package
+Target = sddm-sugar-candy-git
+[Action]
+Description = create /usr/share/wallpapers/wal and enable sddm
+Exec = /bin/sh /etc/pacman.d/hooks.bin/sddm.sh
+When = PostTransaction

@@ -1,0 +1,6 @@
+@define-color background rgba({{background | rgb}}, 0.7);
+@define-color workspace rgb({{color3 | lighten(0.3) | rgb}});
+@define-color workspace_hover rgba({{color3 | lighten(0.3) | rgb}}, 0.5);
+@define-color workspace_underline rgb({{color3 | rgb}});
+@define-color text rgb({{color5 | lighten(0.3)| rgb}});
+@define-color text_dark rgb({{color13 | darken(0.4) | rgb}});

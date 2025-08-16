@@ -1,0 +1,30 @@
+arch = [
+    # xorg
+    "xorg-server",
+
+    # display manager
+    "sddm",
+    "sddm-sugar-candy-git",
+    
+    # i3
+    "i3",
+    "i3status-rust",
+    "dmenu",
+    "picom",
+    "brightnessctl",
+    "dunst",
+    "xorg-xrdb",
+    "playerctl",
+
+    # wallpaper
+    "mpv",
+    "shantz-xwinwrap-bzr",
+    "feh",
+    "ffmpeg",
+    "wallust",
+    "imagemagick",
+
+    # terminal
+    "alacritty",
+    "xclip",
+]

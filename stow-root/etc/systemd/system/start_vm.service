@@ -1,0 +1,9 @@
+[Unit]
+After=network.target
+Description=start virtual machine
+
+[Service]
+ExecStart=/bin/sh /etc/systemd/system/start_vm.sh
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,8 @@
+[commit]
+	gpgsign = true
+[mergetool "fugitive"]
+	cmd = nvim -f -c \"Gvdiffsplit!\" \"$MERGED\"
+[merge]
+	tool = fugitive
+[init]
+	defaultBranch = main

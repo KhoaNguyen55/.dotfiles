@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+base_folder="$HOME/Pictures/screenshots/$( date '+%Y-%m-%d')"
+file_path=${base_folder}/$(date '+%H-%M-%S')_screenshot.jpg
+
+tmp="/tmp/screenshot.jpg"
+
+select_region=`hyprctl clients -j | jq -r ".[] | select(.workspace.id == "$(hyprctl activewindow -j | jq -r '.workspace.id')\)""| jq -r ".at,.size" | jq -s "add" | jq '_nwise(4)' | jq -r '"\(.[0]),\(.[1]) \(.[2])x\(.[3])"'| slurp`
+
+grim -g "$select_region" $tmp
+
+if [[ -f $tmp ]]; then
+    cat $tmp | wl-copy
+    mkdir -p ${base_folder}
+    mv $tmp $file_path
+fi
+
+

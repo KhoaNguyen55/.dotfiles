@@ -1,0 +1,8 @@
+[Trigger]
+Operation = Install
+Type = Package
+Target = keyd
+[Action]
+Description = enable keyd
+Exec = /bin/sh /etc/pacman.d/hooks.bin/keyd.sh
+When = PostTransaction

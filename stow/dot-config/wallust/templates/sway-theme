@@ -1,0 +1,16 @@
+set $bg {{color10}}
+set $bg2 {{color7}}
+set $bg3 {{color1}}
+set $side {{color12}}
+
+set $barbg {{color0}}
+set $statuslinetext {{color7}}
+set $sep {{color4}}
+
+# class                 border  backgr. text indicator child_border
+client.focused          $bg     $bg     $barbg  $side     $bg
+client.focused_inactive $bg2    $bg2    $barbg  $bg       $bg2
+client.unfocused        $bg2    $bg2    $barbg  $bg       $bg2
+client.urgent           $bg3    $bg3    $barbg  $bg       $bg3
+client.placeholder      $bg     $bg     $barbg  $bg       $bg
+client.background       $bg

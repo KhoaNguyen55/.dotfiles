@@ -1,0 +1,43 @@
+# Always needed packages
+arch = [
+    # system
+    "amd-ucode",
+    "base",
+    "base-devel",
+    "efibootmgr",
+    "grub",
+    "linux",
+    "linux-firmware",
+    "metapac-bin",
+    "stow",
+    "yay",
+    "systembus-notify",
+    "libnotify",
+    "udisks2",
+
+    # system qol
+    "earlyoom",
+    "keyd",
+    "zsh",
+    "ntp",
+    "fzf",
+    "openssh",
+    "man-pages",
+    "xdg-user-dirs",
+    "paccache-hook",
+    "reflector",
+    "jq",
+    "man-db",
+
+    # dev tools
+    "git",
+    "neovim",
+    "cmake",
+
+    # fonts
+    "otf-aurulent-nerd",
+    "noto-fonts-emoji",
+
+    # networking
+    "networkmanager",
+]

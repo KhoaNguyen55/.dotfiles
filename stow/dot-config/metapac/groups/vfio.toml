@@ -1,0 +1,7 @@
+arch = [
+    "virt-manager",
+    "libvirt",
+    "qemu-full",
+    "gpu-passthrough-manager",
+    "dnsmasq"
+]

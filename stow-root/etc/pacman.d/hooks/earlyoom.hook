@@ -1,0 +1,8 @@
+[Trigger]
+Operation = Install
+Type = Package
+Target = earlyoom
+[Action]
+Description = enable and change earlyoom config
+Exec = /bin/sh /etc/pacman.d/hooks.bin/earlyoom.sh
+When = PostTransaction

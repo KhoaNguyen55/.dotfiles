@@ -1,0 +1,9 @@
+arch = [
+    "pipewire",
+    "wireplumber",
+    "pavucontrol",
+    "lib32-pipewire",
+    "pipewire-pulse",
+    "pipewire-alsa",
+    "alsa-utils",
+]

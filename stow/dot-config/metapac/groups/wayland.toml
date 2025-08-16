@@ -1,0 +1,33 @@
+arch = [
+    # display manager
+    "sddm",
+    "sddm-sugar-candy-git",
+    
+    # hyprland
+    "hyprland",
+    "waybar",
+    "brightnessctl",
+    "dunst",
+    "rofi",
+    "xdg-desktop-portal-hyprland",
+    "xdg-desktop-portal-wlr",
+    "xdg-desktop-portal-gtk",
+    "xdg-desktop-portal",
+    "xorg-xwayland",
+    "qt5-wayland",
+    "qt6-wayland",
+
+    # screenshot
+    "grim",
+    "slurp",
+
+    # wallpaper
+    "wallust",
+    "imagemagick",
+    "hyprpaper",
+    "mpvpaper",
+
+    # terminal
+    "alacritty",
+    "wl-clipboard",
+]
