@@ -51,9 +51,9 @@ vim.keymap.set('v', '<Tab>', '>gv')
 vim.keymap.set('v', '<S-Tab>', '<gv')
 
 -- Search and replace word under cursor
-vim.keymap.set('n', '<leader>sr', [[:%s/\V<C-r><C-w>/<C-r><C-w>/gI<Left><Left><Left>]], { desc = 'Search and replace word under cursor' })
-vim.keymap.set('x', '<leader>sr', [[<Esc>:'<,'>s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], { desc = 'Search and replace in range' })
-vim.keymap.set('x', '<leader>sw', [["ay:%s/\V<C-r>a/<C-r>a/gI<Left><Left><Left>]], { desc = 'Search and replace highlighted' })
+vim.keymap.set('n', '<leader>fr', [[:%s/\V<C-r><C-w>/<C-r><C-w>/gI<Left><Left><Left>]], { desc = 'Find and replace word under cursor' })
+vim.keymap.set('x', '<leader>fr', [[<Esc>:'<,'>s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], { desc = 'Find and replace in range' })
+vim.keymap.set('x', '<leader>fw', [["ay:%s/\V<C-r>a/<C-r>a/gI<Left><Left><Left>]], { desc = 'Find and replace word highlighted' })
 
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
