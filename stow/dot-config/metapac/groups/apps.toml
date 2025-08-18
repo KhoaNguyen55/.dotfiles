@@ -23,4 +23,5 @@ arch = [
     "7zip",
     "keepassxc",
     "unzip",
+    "fd",
 ]
