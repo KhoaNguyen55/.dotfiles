@@ -20,4 +20,5 @@ arch = [
     #Video games
     "godot",
     "libresprite",
+    "git-lfs",
 ]
