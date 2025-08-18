@@ -133,7 +133,7 @@ return {
       end
 
       vim.keymap.set('n', '<leader>sF', function()
-        search_folder { vim.o.shell, '-c', "find . ! -path . ! -path './.*' -type d | cut -c3-" }
+        search_folder { vim.o.shell, '-c', 'fd -td' }
       end, { desc = 'Search Folders' })
     end,
   },
