@@ -12,10 +12,9 @@ sleep 0.1
 select_region=`hyprctl clients -j | jq -r ".[] | select(.workspace.id == "$(hyprctl activewindow -j | jq -r '.workspace.id')\)""| jq -r ".at,.size" | jq -s "add" | jq '(length / 4 | ceil) as $num_chunks | range(0; $num_chunks) as $i | .[4 * $i : 4 * $i + 4]' | jq -r '"\(.[0]),\(.[1]) \(.[2])x\(.[3])"'| slurp`
 
 if [[ $? = 1 ]]; then
+    pkill hyprpicker
     exit 0
 fi
-
-pkill hyprpicker
 
 args=($@)
 for ((i=0; i <= ${#args[@]}; i++)); do
@@ -42,15 +41,17 @@ sleep 0.2
 
 grim -g "$select_region" "$tmp"
 
+pkill hyprpicker
+
 if [[ -f $tmp ]]; then
-    if [[ -f "$file_path".png ]]; then
+    if [[ -f "$file_path" ]]; then
         increment=`find "$base_folder" -wholename "$file_path*" | wc -l`
         file_path=$file_path$increment
     fi
 
     cat $tmp | wl-copy
     mkdir -p ${base_folder}
-    mv $tmp $file_path.png
+    mv $tmp $file_path
 fi
 
 
