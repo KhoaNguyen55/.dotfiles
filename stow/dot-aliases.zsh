@@ -13,6 +13,8 @@ alias syssuspend='systemctl suspend'
 alias tmux='tmux attach || tmux new -As0'
 alias screen-sleep='sleep 1; xset dpms force off'
 alias gvim='nvim --listen /tmp/nvimgodot'
+alias rm='echo "use trash-put"; false'
+alias tp='trash-put'
 
 function ssht () {
     /usr/bin/ssh -t "$@" "tmux attach || tmux new";

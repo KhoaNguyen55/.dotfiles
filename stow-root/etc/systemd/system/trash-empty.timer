@@ -1,0 +1,10 @@
+[Unit]
+Description=Clean Trash
+
+[Timer]
+OnCalendar=daily
+Persistent=true
+Unit=trash-empty.service
+
+[Install]
+WantedBy=timers.target

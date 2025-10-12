@@ -28,6 +28,8 @@ arch = [
     "reflector",
     "jq",
     "man-db",
+    "trash-cli",
+    "syncthing",
 
     # dev tools
     "git",
