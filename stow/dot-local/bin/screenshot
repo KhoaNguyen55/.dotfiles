@@ -7,12 +7,17 @@ tmp="/tmp/screenshot.png"
 
 hyprpicker -r -z &
 
+function cleanup {
+    pkill hyprpicker
+}
+
+trap cleanup EXIT
+
 sleep 0.1
 
 select_region=`hyprctl clients -j | jq -r ".[] | select(.workspace.id == "$(hyprctl activewindow -j | jq -r '.workspace.id')\)""| jq -r ".at,.size" | jq -s "add" | jq '(length / 4 | ceil) as $num_chunks | range(0; $num_chunks) as $i | .[4 * $i : 4 * $i + 4]' | jq -r '"\(.[0]),\(.[1]) \(.[2])x\(.[3])"'| slurp`
 
 if [[ $? = 1 ]]; then
-    pkill hyprpicker
     exit 0
 fi
 
@@ -40,8 +45,6 @@ file_path="${base_folder}/$file_name"
 sleep 0.2
 
 grim -g "$select_region" "$tmp"
-
-pkill hyprpicker
 
 if [[ -f $tmp ]]; then
     if [[ -f "$file_path" ]]; then
