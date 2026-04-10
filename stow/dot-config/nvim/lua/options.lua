@@ -14,6 +14,8 @@ vim.diagnostic.config {
   virtual_text = true, -- Text shows up underneath the line, with virtual lines
 }
 
+vim.o.winborder = 'single'
+
 vim.o.foldlevel = 999 -- keep all fold open by default
 
 -- Make line numbers default

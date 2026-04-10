@@ -39,6 +39,7 @@ require('lazy').setup({
   require 'custom.plugins.fugitive',
   require 'custom.plugins.live-preview',
   require 'custom.plugins.oil',
+  require 'custom.plugins.harpoon',
   require 'custom.plugins.undotree',
 }, {
   ui = {
