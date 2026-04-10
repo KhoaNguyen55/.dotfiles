@@ -3,6 +3,19 @@
 -- NOTE: You can change these options as you wish!
 --  For more options, you can see `:help option-list`
 
+-- Diagnostic Config & Keymaps
+-- See :help vim.diagnostic.Opts
+vim.diagnostic.config {
+  update_in_insert = false,
+  severity_sort = true,
+  float = { border = 'rounded', source = 'if_many' },
+  underline = { severity = { min = vim.diagnostic.severity.WARN } },
+
+  virtual_text = true, -- Text shows up underneath the line, with virtual lines
+}
+
+vim.o.foldlevel = 999 -- keep all fold open by default
+
 -- Make line numbers default
 vim.o.number = true
 vim.o.relativenumber = true

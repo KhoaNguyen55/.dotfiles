@@ -1,5 +1,6 @@
 return {
   'stevearc/oil.nvim',
+  lazy = false,
   config = function()
     require('oil').setup {
       delete_to_trash = true,

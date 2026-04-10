@@ -25,12 +25,6 @@ vim.keymap.set('n', '<leader>Y', [["+Y]], { desc = 'Copy to clipboard' })
 -- Ctrl + s = save
 vim.keymap.set({ 'i', 'v', 'n' }, '<C-s>', '<cmd>:w %<CR>')
 
--- NOTE: Some terminals have colliding keymaps or are not able to send distinct keycodes
-vim.keymap.set('n', '<C-S-h>', '<C-w>H', { desc = 'Move window to the left' })
-vim.keymap.set('n', '<C-S-l>', '<C-w>L', { desc = 'Move window to the right' })
-vim.keymap.set('n', '<C-S-j>', '<C-w>J', { desc = 'Move window to the lower' })
-vim.keymap.set('n', '<C-S-k>', '<C-w>K', { desc = 'Move window to the upper' })
-
 -- Don't replace buffer when delete
 vim.keymap.set({ 'n', 'v' }, 'd', [["_d]])
 vim.keymap.set({ 'n', 'v' }, 'x', [["_x]])
@@ -41,7 +35,7 @@ vim.keymap.set({ 'n', 'v' }, '<leader>d', 'd')
 vim.keymap.set({ 'n', 'v' }, '<leader>x', 'x')
 
 -- Full screen a buffer
-vim.keymap.set('n', '<C-W>z', ':tabedit %<CR>', { desc = 'Expand the current buffer to be fullscreen' })
+vim.keymap.set('n', '<C-W>z', "m]:tabedit %<CR>']zz", { desc = 'Expand the current buffer to be fullscreen' })
 
 -- Make current script executable
 vim.keymap.set('n', '<leader>chx', '<cmd>!chmod +x %<CR>', { silent = true, desc = 'Make the current script executable' })
